@@ -1,0 +1,39 @@
+/* Styling The Background */
+body {
+    background-image: url("images/concert-landing-page-background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Styling The Navbar */
+.nav-link {
+    color: rgba(0,0,0,.9);
+}
+
+/* Styling The Heading */
+#content {
+    margin-top: 175px;
+}
+
+#content h1 {
+    font-size: 9vw;
+}
+
+#content .lead {
+    font-size: 1.5vw;
+}
+
+#content hr {
+    border-top: 1px solid whitesmoke;
+    width: 35%;
+}
+
+@media (max-width: 1000px) {
+    #content h1 {
+        font-size: 11vw;
+    }
+    #content .lead {
+        font-size: 2.5vw;
+    }
+}
