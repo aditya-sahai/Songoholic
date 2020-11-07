@@ -22,7 +22,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-around">
         <a class="navbar-brand justify-self-start" href="{% url 'landing-page' %}">Songoholic</a>
-        <a class="nav-link nav-item" href="#">Songs Info</a>
+        <a class="nav-link nav-item" href="{% url 'songs-info' %}">Songs Info</a>
         <a class="nav-link nav-item" href="{% url 'top-100' %}">Billboard Top 100</a>
     </nav>
     {% block content %}

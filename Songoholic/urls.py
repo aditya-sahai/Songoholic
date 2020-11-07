@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.landing_page, name="landing-page"),
     path('top-100/', include("Top100SongsList.urls")),
+    path('songs-info/', include("SongsInfo.urls")),
 ]
