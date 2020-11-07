@@ -1,60 +1,38 @@
+{% extends "base.html" %}
+
+{% block css_link %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" href="{% static 'CSS/top-100.css' %}">
+{% endblock css_link %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'Bootstrap/bootstrap.min.css' %}">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="{% static 'Bootstrap/bootstrap.min.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'CSS/top-100.css' %}">
-    <title>Songoholic</title>
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-around">
-        <a class="navbar-brand justify-self-start" href="{% url 'landing-page' %}">Songoholic</a>
-        <a class="nav-link nav-item" href="#">Songs Info</a>
-        <a class="nav-link nav-item" href="#">Billboard Top 100</a>
-    </nav>
-    <section id="content">
-        <div class="container mt-5">
-            <h1 class="display-1 text-center text-white">Billboard Hot 100</h1>
-            <table class="table table-striped mt-3">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Song</th>
-                        <th scope="col">Artist</th>
-                        <th scope="col">Last Week</th>
-                        <th scope="col">Peak</th>
-                        <th scope="col">Weeks On Chart</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for song in data %}
-                    <tr>
-                        <td scope="row">{{ song.rank }}</td>
-                        <td>{{ song.song_name }}</td>
-                        <td>{{ song.artists }}</td>
-                        <td>{{ song.peak_rank }}</td>
-                        <td>{{ song.weeks_on_chart }}</td>
-                        <td>{{ song.rank_last_week }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </section>
-</body>
-
-</html>
+{% block content %}
+<section id="content">
+    <div class="container mt-5">
+        <h1 class="display-1 text-center text-white">Billboard Hot 100</h1>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Song</th>
+                    <th scope="col">Artist</th>
+                    <th scope="col">Last Week</th>
+                    <th scope="col">Peak</th>
+                    <th scope="col">Weeks On Chart</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for song in data %}
+                <tr>
+                    <td scope="row">{{ song.rank }}</td>
+                    <td>{{ song.song_name }}</td>
+                    <td>{{ song.artists }}</td>
+                    <td>{{ song.peak_rank }}</td>
+                    <td>{{ song.weeks_on_chart }}</td>
+                    <td>{{ song.rank_last_week }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}
