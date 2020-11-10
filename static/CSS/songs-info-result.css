@@ -1,0 +1,36 @@
+/* Styling The Background */
+body {
+    background-image: url("images/songs-info-result-guitar.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Styling The Navbar */
+.nav-link {
+    color: rgba(0,0,0,.9);
+}
+
+/* Styling The Song Data Div */
+.song-data {
+    margin-top: 40px;
+}
+
+/* Styling The Album Image */
+.album-img {
+    width: 100%;
+}
+
+/* Styling The Explicit Symbol */
+.explicit-symbol {
+    font-size: 1rem;
+    border-radius: 3px;
+    background: gray;
+    margin-left: 5px;
+}
+
+@media (max-width: 500px) {
+    #content h1 {
+        font-size: 9vw;
+    }
+}

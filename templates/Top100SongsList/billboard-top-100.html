@@ -2,7 +2,7 @@
 
 {% block css_link %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'CSS/top-100.css' %}">
+<link rel="stylesheet" href="{% static 'CSS/top-100.css' %}?{% now 'U' %}">
 {% endblock css_link %}
 
 {% block content %}
