@@ -1,6 +1,10 @@
+html,body {
+    margin:0;
+    padding:0;
+}
+
 /* Styling The Background */
 body {
-    background-image: url("images/songs-info-result-guitar.jpg");
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Roboto', sans-serif;
@@ -16,7 +20,7 @@ body {
     font-size: 9vw;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
     .display-1 {
         font-size: 11vw;
     }

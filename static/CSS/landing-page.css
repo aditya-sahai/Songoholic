@@ -1,11 +1,15 @@
 /* Styling The Background */
 body {
     background-image: url("images/concert-landing-page-background.jpg");
+    /* Uncomment for logo */
+    /* background-image:
+        url(images/concert-landing-page-background-overlay.png),
+        url(images/concert-landing-page-background.png); */
 }
 
 /* Styling The Heading */
 #content {
-    margin-top: 175px;
+    margin-top: 200px;
 }
 
 #content .lead {
@@ -17,8 +21,17 @@ body {
     width: 35%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
     #content .lead {
         font-size: 2.5vw;
     }
+    
+    /* Uncomment for logo */
+    /* .songoholic-logo {
+        display: none;
+    }
+
+    body {
+        background-image: url(images/concert-landing-page-background.png);
+    } */
 }
