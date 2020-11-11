@@ -1,0 +1,23 @@
+/* Styling The Background */
+body {
+    background-image: url("images/songs-info-result-guitar.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Styling The Navbar */
+.nav-link {
+    color: rgba(0,0,0,.9);
+}
+
+/* Styling Heading */
+.display-1 {
+    font-size: 9vw;
+}
+
+@media (max-width: 1000px) {
+    .display-1 {
+        font-size: 11vw;
+    }
+}

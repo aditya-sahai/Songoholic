@@ -1,26 +1,13 @@
 /* Styling The Background */
 body {
     background-image: url("images/songs-info-mic.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    font-family: 'Roboto', sans-serif;
 }
 
-/* Styling The Navbar */
-.nav-link {
-    color: rgba(0,0,0,.9);
-}
-
-/* Styling The Heading */
-#content h1 {
-    font-size: 9vw;
-}
-
+/* Styling the form */
 #content form {
     margin-top: 100px;
 }
 
-/* Styling the form */
 label {
     font-size: 40px;
 }

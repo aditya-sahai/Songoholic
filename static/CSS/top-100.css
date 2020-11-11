@@ -1,21 +1,9 @@
 /* Styling The Background */
 body {
     background-image: url("images/violin-image.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    font-family: 'Roboto', sans-serif;
 }
 
-/* Styling The Navbar */
-.nav-link {
-    color: rgba(0,0,0,.9);
-}
-
-/* Styling The Heading */
-#content h1 {
-    font-size: 9vw;
-}
-
+/* Styling The Table */
 #content table {
     background-color: whitesmoke;
 }
@@ -26,13 +14,4 @@ body {
 
 #content table th {
     text-align: center;
-}
-
-@media (max-width: 1000px) {
-    #content h1 {
-        font-size: 11vw;
-    }
-    #content .lead {
-        font-size: 2.5vw;
-    }
 }
