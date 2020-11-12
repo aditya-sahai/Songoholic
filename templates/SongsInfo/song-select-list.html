@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block css_link %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'CSS/song-select.css' %}?{% now 'U' %}">
+{% endblock css_link %}
+
+{% block content %}
+<section id="content">
+    <div class="container text-white mt-5">
+        <p class="lead text-center opening-text">
+            We have found {{ songs|length }} songs. Please select the one you are looking for.
+        </p>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Song</th>
+                    <th scope="col">Artists</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for song in songs %}
+                <tr>
+                    <td scope="row">{{ forloop.counter }}</td>
+                    <td>{{ song.name }}</td>
+                    <td>
+                    {% for artist in song.artists_data %}
+                        {% with name=artist.name %}
+                            {% if forloop.last %}
+                                {{ name }}
+                            {% else %}
+                                {{ name }},
+                            {% endif %}
+                        {% endwith %}
+                    {% endfor %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock content %}

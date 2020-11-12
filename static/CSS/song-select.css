@@ -1,0 +1,22 @@
+/* Styling The Background */
+body {
+    background-image: url("images/drums.jpg");
+}
+
+/* Styling opening heading */
+.opening-text {
+    font-size: 30px;
+}
+
+/* Styling The Table */
+#content table {
+    background-color: whitesmoke;
+}
+
+#content table td {
+    text-align: center;
+}
+
+#content table th {
+    text-align: center;
+}
