@@ -21,19 +21,23 @@
             </thead>
             <tbody>
                 {% for song in songs %}
-                <tr>
+                <tr onclick="{% url 'songs-info-result' %}">
                     <td scope="row">{{ forloop.counter }}</td>
-                    <td>{{ song.name }}</td>
                     <td>
-                    {% for artist in song.artists_data %}
-                        {% with name=artist.name %}
-                            {% if forloop.last %}
-                                {{ name }}
-                            {% else %}
-                                {{ name }},
-                            {% endif %}
-                        {% endwith %}
-                    {% endfor %}
+                        <img src="{{ song.album_data.img_link }}" alt="{{ song.name }} Image" class="song-image">
+                        <!-- <a href="{% url 'songs-info-result' %}">{{ song.name }}</a> -->
+                        {{ song.name }}
+                    </td>
+                    <td>
+                        {% for artist in song.artists_data %}
+                            {% with name=artist.name %}
+                                {% if forloop.last %}
+                                    {{ name }}
+                                {% else %}
+                                    {{ name }},
+                                {% endif %}
+                            {% endwith %}
+                        {% endfor %}
                     </td>
                 </tr>
                 {% endfor %}

@@ -9,10 +9,9 @@
 <section id="content">
     <div class="container mt-5">
         <h1 class="display-1 text-center text-white">Songs Info</h1>
-        <form method="post" action="/songs-info/song-info-result.html">{% csrf_token %}
+        <form method="post" action="{% url 'songs-info' %}">{% csrf_token %}
             <div class="form-group row justify-content-center">
-                <label for="song-input" class="text-white">Song</label>
-                <input type="text" class="form-control" id="song-input" placeholder="Enter Song Name" name="song-input" required>
+                {{ form }}
                 <button type="submit" class="btn btn-success mt-3">Get Info</button>
             </div>
         </form>

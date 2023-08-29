@@ -19,7 +19,7 @@ class SongInfoDataManager:
     def get_credentials(self):
         """Gets the credentials from credentials.json file."""
 
-        credentials = json.load(open("credentials.json"))
+        credentials = json.load(open("SongsInfo/credentials.json"))
         self.client_id = credentials["client_id"]
         self.client_secret = credentials["client_secret"]
 
@@ -27,9 +27,9 @@ class SongInfoDataManager:
         """Gets the data of the given song."""
 
         search_results = self.sp.search(q=self.search_song, type="track")["tracks"]["items"]
-        # with open("temp.json", "w") as f:
-        #     json.dump(self.sp.search(q=self.search_song, type="track"), f, indent=4)
-        songs = []
+        with open("temp.json", "w") as f:
+            json.dump(self.sp.search(q=self.search_song[0], type="track"), f, indent=4)
+        self.songs = []
 
         for search_result in search_results:
             artists = search_result["artists"]
@@ -74,10 +74,10 @@ class SongInfoDataManager:
             # print("-" * 90)
             # print(f"\nSong Data: {json.dumps(song_data, indent=4)}")
             # print("-" * 90)
-            songs.append(song_data)
+            self.songs.append(song_data)
         
-        with open("temp.json", "w") as f:
-            json.dump(songs, f, indent=4)
+        # with open("SongsInfo/temp.json", "w") as f:
+        #     json.dump(self.songs[0], f, indent=4)
 
 
 if __name__ == "__main__":

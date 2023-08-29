@@ -20,3 +20,13 @@ body {
 #content table th {
     text-align: center;
 }
+
+tr {
+    line-height: 50px;
+    text-align: center;
+}
+.song-image {
+    width: 50px;
+    border-radius: 5px;
+    float: left;
+}
